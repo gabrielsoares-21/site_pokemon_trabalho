@@ -1,0 +1,228 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e33535;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+/* Menu de navegação */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #e33535;
+    border-radius: 5px;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos e subtítulos (PADRONIZAÇÃO exigida) */
+h1 {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #e33535;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e33535;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+/* Parágrafos */
+p {
+    margin-bottom: 15px;
+}
+
+/* Listas */
+ul, ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e33535;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Formulário */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #e33535;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #c02020;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Lista de tipos Pokémon - 6 por linha */
+.lista-tipos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+}
+
+.lista-tipos li {
+    background-color: #e33535;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .lista-tipos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .lista-tipos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

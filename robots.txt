@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /secreto/
+
+Sitemap: https://gabrielsoares-21.github.io/site_pokemon_trabalho/sitemap.xml
